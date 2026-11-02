@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-radius: 0px;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #fef9e9;
+    color: #1d1c12;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: var(--font-montserrat), sans-serif;
+    background-color: #fef9e9;
+    color: #1d1c12;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #710001;
+    color: #F4EFDF;
+  }
+}
+
+/* Custom utility styles for luxury editorial typography & borders */
+.border-hairline {
+  border-color: rgba(113, 0, 1, 0.14);
+}
+
+.bg-canvas {
+  background-color: #F4EFDF;
+}
+
+.text-gold-accent {
+  color: #C5A880;
+}
+

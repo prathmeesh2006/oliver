@@ -1,0 +1,849 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-variant": "#e7e2d3",
+        "vellum-cream": "#F4EFDF",
+        "primary-fixed": "#ffdad5",
+        "secondary-fixed": "#ffdad8",
+        "tertiary-container": "#443113",
+        "secondary-fixed-dim": "#ffb3b1",
+        "secondary-container": "#fc6d6f",
+        "surface-container": "#f3eede",
+        "error-container": "#ffdad6",
+        "surface-container-lowest": "#ffffff",
+        "charcoal-ink": "#121212",
+        "on-tertiary-fixed": "#281800",
+        "overlay-scrim": "rgba(18, 18, 18, 0.6)",
+        "on-tertiary": "#ffffff",
+        "secondary": "#ac3138",
+        "surface-container-high": "#ede8d8",
+        "on-primary-fixed": "#410000",
+        "tertiary-fixed": "#fedeb2",
+        "on-primary": "#ffffff",
+        "background": "#fef9e9",
+        "on-secondary-container": "#6d0013",
+        "primary-container": "#710001",
+        "on-error": "#ffffff",
+        "on-primary-fixed-variant": "#8c180f",
+        "inverse-primary": "#ffb4a9",
+        "on-surface": "#1d1c12",
+        "on-error-container": "#93000a",
+        "surface-dim": "#dfdaca",
+        "bronze-accent": "#C5A880",
+        "error": "#ba1a1a",
+        "on-secondary-fixed": "#410007",
+        "on-tertiary-fixed-variant": "#584323",
+        "on-background": "#1d1c12",
+        "surface-container-low": "#f9f3e3",
+        "tertiary": "#2c1c02",
+        "garnet-deep": "#710001",
+        "inverse-surface": "#323126",
+        "garnet-wine": "#710014",
+        "outline-variant": "#e0bfba",
+        "surface-bright": "#fef9e9",
+        "surface-tint": "#ad3124",
+        "linen-surface": "#FAF7F0",
+        "on-secondary-fixed-variant": "#8b1823",
+        "outline": "#8c716c",
+        "surface-container-highest": "#e7e2d3",
+        "surface": "#fef9e9",
+        "primary-fixed-dim": "#ffb4a9",
+        "on-surface-variant": "#59413d",
+        "tertiary-fixed-dim": "#e0c298",
+        "border-hairline": "rgba(113, 0, 1, 0.14)",
+        "primary": "#490000",
+        "inverse-on-surface": "#f6f1e1",
+        "on-secondary": "#ffffff",
+        "on-primary-container": "#ff715e",
+        "on-tertiary-container": "#b59972"
+      },
+      "borderRadius": {
+        "DEFAULT": "0px",
+        "sm": "0px",
+        "md": "0px",
+        "lg": "0px",
+        "xl": "0px",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-md": "1rem",
+        "margin-mobile": "1.25rem",
+        "space-2xl": "5rem",
+        "margin": "4rem",
+        "space-xl": "3.5rem",
+        "space-sm": "0.5rem",
+        "space-lg": "2rem",
+        "gutter": "1.5rem",
+        "gutter-mobile": "0.75rem",
+        "space-xs": "0.25rem"
+      },
+      "fontFamily": {
+        "headline-lg-mobile": ["EB Garamond", "serif"],
+        "label-micro": ["Montserrat", "sans-serif"],
+        "body-sm": ["Montserrat", "sans-serif"],
+        "body-md": ["Montserrat", "sans-serif"],
+        "price-headline": ["Montserrat", "sans-serif"],
+        "label-uppercase": ["Montserrat", "sans-serif"],
+        "headline-md": ["EB Garamond", "serif"],
+        "display-hero-mobile": ["EB Garamond", "serif"],
+        "headline-lg": ["EB Garamond", "serif"],
+        "body-lg": ["Montserrat", "sans-serif"],
+        "headline-sm": ["EB Garamond", "serif"],
+        "display-hero": ["EB Garamond", "serif"]
+      },
+      "fontSize": {
+        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }],
+        "label-micro": ["9px", { "lineHeight": "12px", "letterSpacing": "0.22em", "fontWeight": "600" }],
+        "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+        "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+        "price-headline": ["20px", { "lineHeight": "26px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+        "label-uppercase": ["11px", { "lineHeight": "16px", "letterSpacing": "0.18em", "fontWeight": "500" }],
+        "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }],
+        "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+        "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "300" }],
+        "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+        "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }]
+      }
+    }
+  }
+};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-garnet-deep selection:text-vellum-cream">
+<!-- 1. TOP ANNOUNCEMENT BAR -->
+<div class="h-9 bg-primary-container text-vellum-cream flex items-center justify-center px-4 md:px-margin z-50 relative"></div>
+<!-- 2. HEADER & NAVIGATION -->
+<header class="sticky top-0 left-0 w-full z-40 bg-vellum-cream/95 backdrop-blur-md border-b border-border-hairline shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-[1440px] mx-auto px-margin-mobile md:px-space-lg lg:px-margin"><div class="h-20 flex items-center justify-between"><div class="flex items-center shrink-0"><a class="font-headline-lg text-headline-lg text-primary tracking-tight font-normal select-none uppercase hover:opacity-90 transition-opacity" data-path="shop-all" href="#"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAvvY75mhoVMmBDTYsAIE8C87aUa5Zq8OU-Y8M1S66F3DS2qdwhQdhZK_3Kuqpbcn4NbyY9g85eow3bV5qETLrZ4xD_OcwyOPVVKRgQlgXXPuz_crwLg8B3uQwcnMMAEveiSXTI0uVeUMHCgygo8sNXvRIsfoIFPYrfZU0ZO9vNzD0R0la5h8zazyYfNhJvQJl1r4BnJIayYEIvNgg9S8dh9DvdNtHT6YzCOB6XUtmB8Z1LyZ_OQaFdA" alt="OLIVER" class="h-9 w-auto object-contain"></a></div><nav class="hidden xl:flex items-center space-x-gutter justify-center"><a class="font-body-sm text-[12px] tracking-[0.15em] text-charcoal-ink hover:text-primary transition-colors duration-200 uppercase font-medium" data-path="home" href="#">HOME</a><a class="font-body-sm text-[12px] tracking-[0.15em] text-charcoal-ink hover:text-primary transition-colors duration-200 uppercase font-medium" data-path="shop-all" href="#">SHOP ALL</a><a aria-current="page" class="font-body-sm text-[12px] tracking-[0.15em] text-charcoal-ink hover:text-primary transition-colors duration-200 uppercase font-medium underline underline-offset-4" data-path="rings" href="#">RINGS</a><a class="font-body-sm text-[12px] tracking-[0.15em] text-charcoal-ink hover:text-primary transition-colors duration-200 uppercase font-medium" data-path="earrings" href="#">EARRINGS</a><a class="font-body-sm text-[12px] tracking-[0.15em] text-charcoal-ink hover:text-primary transition-colors duration-200 uppercase font-medium" data-path="necklaces" href="#">NECKLACES</a><a class="font-body-sm text-[12px] tracking-[0.15em] text-charcoal-ink hover:text-primary transition-colors duration-200 uppercase font-medium" data-path="about-us" href="#">ABOUT US</a><a class="font-body-sm text-[12px] tracking-[0.15em] text-charcoal-ink hover:text-primary transition-colors duration-200 uppercase font-medium" data-path="contact-us" href="#">CONTACT US</a><a class="font-body-sm text-[12px] tracking-[0.15em] text-charcoal-ink hover:text-primary transition-colors duration-200 uppercase font-medium" data-path="privilege" href="#">PRIVILEGE</a></nav><div class="flex items-center space-x-space-md shrink-0"><button aria-label="Search Archive" class="text-charcoal-ink hover:text-primary transition-colors duration-200 p-space-xs"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Curated Wishlist" class="text-charcoal-ink hover:text-primary transition-colors duration-200 p-space-xs relative" id="header-wishlist-btn"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="absolute top-0 right-0 font-label-micro text-label-micro text-primary font-bold" id="wishlist-badge">0</span></button><button aria-label="Maison Account" class="text-charcoal-ink hover:text-primary transition-colors duration-200 p-space-xs"><span class="material-symbols-outlined text-[20px]">person</span></button><button class="px-3 py-1.5 bg-primary-container text-vellum-cream font-label-uppercase text-label-uppercase tracking-[0.18em] uppercase hover:bg-garnet-wine transition-colors flex items-center space-x-1.5 shadow-sm rounded-full" id="header-bag-btn" type="button"><span class="material-symbols-outlined text-[16px]">shopping_bag</span><span class="">BAG (<span id="bag-count-badge" class="">0</span>)</span></button></div></div></div></header>
+<main class="w-full bg-surface min-h-screen">
+<div class="flex flex-col w-full">
+<!-- Toast Notification (Acquisition Feedback) -->
+<div class="fixed top-24 right-4 md:right-6 z-50 transform -translate-y-40 opacity-0 pointer-events-none transition-all duration-300 ease-out max-w-md w-full bg-linen-surface shadow-2xl p-space-md border border-border-hairline" id="acquisition-toast">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-14 bg-surface-container shrink-0 overflow-hidden">
+<img alt="The Jaipur Emerald Octagon Ring preview" class="w-full h-full object-cover" id="toast-preview-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrN1nvJXgmcUV6QdQ4YrPPv3Zbe7gtyKqzV1V5WB7rqvHmWc08fYzJ0_7c-B4VV3hZAZbJQuZJefPPDaf8YoGEeknyTyrzPXeAj_yQAjDlP_nIrE4mX8O4AM1vGGsqZK2BAa5qREhRFL2-Dp2RGK_CffjdtV24MiBefhLg-6DfB-SQ8ElCJKeWy_1GbU1FK9GCybcpy-GrRuGLmUR1cBTFXIHBvDa4bdboMPhNO7kR">
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<p class="font-label-micro text-label-micro text-garnet-deep uppercase tracking-[0.22em] font-semibold">VAULT BAG UPDATED</p>
+<button class="text-on-surface-variant hover:text-charcoal-ink p-1" id="close-toast">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<p class="font-headline-sm text-[18px] text-charcoal-ink mt-0.5 truncate uppercase">The Jaipur Emerald Octagon Ring</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5"><span id="toast-size-label" class="">Size 14 IN</span> · Qty <span id="toast-qty-label" class="">1</span></p>
+<div class="mt-space-sm flex items-center gap-space-sm">
+<a class="px-space-md py-2 bg-primary-container text-vellum-cream font-label-uppercase text-label-uppercase tracking-[0.18em] uppercase hover:bg-garnet-wine transition-colors" href="#" id="view-bag-link">View Bag (1)</a>
+<button class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-primary transition-colors" id="toast-dismiss-btn">Continue</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sizing Guide Modal -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-overlay-scrim opacity-0 pointer-events-none transition-opacity duration-300 px-margin-mobile md:px-0" id="sizing-modal">
+<div class="bg-linen-surface max-w-xl w-full p-space-lg md:p-space-xl relative shadow-2xl transition-transform duration-300 scale-95 border border-border-hairline" id="sizing-modal-card">
+<div class="flex items-center justify-between pb-space-sm">
+<p class="font-label-micro text-label-micro uppercase tracking-[0.22em] text-garnet-deep font-semibold">ATELIER COMPENDIUM</p>
+<button class="text-on-surface-variant hover:text-charcoal-ink p-1" id="close-sizing-modal">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<h3 class="font-headline-md text-headline-md text-charcoal-ink uppercase tracking-tight mt-1">Indian Standard Sizing Scale</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Measured across internal circumference with gemological vernier calipers at 24°C standard room temperature.</p>
+<div class="mt-space-md overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm border border-border-hairline">
+<thead>
+<tr class="bg-surface-container font-label-uppercase text-label-uppercase text-on-surface border-b border-border-hairline">
+<th class="py-2.5 px-3">IN Size</th>
+<th class="py-2.5 px-3">Diameter (mm)</th>
+<th class="py-2.5 px-3">Circumference (mm)</th>
+<th class="py-2.5 px-3">US Equivalent</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-hairline text-on-surface">
+<tr class="hover:bg-surface-container/50"><td class="py-2 px-3 font-medium">10</td><td class="py-2 px-3">15.9 mm</td><td class="py-2 px-3">50.0 mm</td><td class="py-2 px-3">US 5¼</td></tr>
+<tr class="hover:bg-surface-container/50"><td class="py-2 px-3 font-medium">12</td><td class="py-2 px-3">16.5 mm</td><td class="py-2 px-3">51.9 mm</td><td class="py-2 px-3">US 6</td></tr>
+<tr class="bg-surface-container font-medium text-garnet-deep"><td class="py-2 px-3">14 (Standard)</td><td class="py-2 px-3">17.2 mm</td><td class="py-2 px-3">54.0 mm</td><td class="py-2 px-3">US 6¾</td></tr>
+<tr class="hover:bg-surface-container/50"><td class="py-2 px-3 font-medium">16</td><td class="py-2 px-3">17.8 mm</td><td class="py-2 px-3">56.0 mm</td><td class="py-2 px-3">US 7½</td></tr>
+<tr class="hover:bg-surface-container/50"><td class="py-2 px-3 font-medium">18</td><td class="py-2 px-3">18.5 mm</td><td class="py-2 px-3">58.1 mm</td><td class="py-2 px-3">US 8¼</td></tr>
+<tr class="hover:bg-surface-container/50"><td class="py-2 px-3 font-medium">20</td><td class="py-2 px-3">19.1 mm</td><td class="py-2 px-3">60.0 mm</td><td class="py-2 px-3">US 9</td></tr>
+</tbody>
+</table>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-garnet-deep text-[18px] shrink-0 mt-0.5">diamond</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Unsure of your gauge? Oliver provides complimentary bespoke resin ring sizing mandrels sent via express air prior to setting casting.</p>
+</div>
+<div class="mt-space-md flex justify-end">
+<button class="px-space-md py-2.5 bg-primary-container text-vellum-cream font-label-uppercase text-label-uppercase uppercase tracking-[0.18em] hover:bg-garnet-wine transition-colors" id="confirm-size-guide">I Understand My Metric</button>
+</div>
+</div>
+</div>
+<!-- Primary PDP Container -->
+<section class="max-w-[1440px] mx-auto px-margin-mobile md:px-space-lg lg:px-margin pt-space-md pb-space-2xl w-full">
+<!-- 3. BREADCRUMBS -->
+<nav aria-label="Breadcrumb" class="mb-space-md flex items-center space-x-2 text-on-surface-variant">
+<a class="font-label-uppercase text-label-uppercase hover:text-primary transition-colors uppercase" href="#">Home</a>
+<span class="font-label-micro text-label-micro text-bronze-accent">/</span>
+<a class="font-label-uppercase text-label-uppercase hover:text-primary transition-colors uppercase" href="#">Rings</a>
+<span class="font-label-micro text-label-micro text-bronze-accent">/</span>
+<a class="font-label-uppercase text-label-uppercase hover:text-primary transition-colors uppercase" href="#">Solitaires</a>
+<span class="font-label-micro text-label-micro text-bronze-accent">/</span>
+<span class="font-label-uppercase text-label-uppercase text-primary font-semibold uppercase tracking-[0.18em]">The Jaipur Emerald Octagon Ring</span>
+</nav>
+<!-- Main Two-Column Atelier Stage -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- 4. PRODUCT GALLERY (LEFT COLUMN: 7 Cols Desktop) -->
+<div class="lg:col-span-7 flex flex-col-reverse md:flex-row gap-gutter">
+<!-- Thumbnails Column -->
+<div class="flex md:flex-col gap-space-sm shrink-0 overflow-x-auto md:overflow-visible pb-2 md:pb-0" id="thumb-strip">
+<button class="thumb-btn w-16 h-20 md:w-20 md:h-24 bg-surface-container overflow-hidden shrink-0 relative transition-all duration-200 outline outline-2 outline-primary-container" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDrN1nvJXgmcUV6QdQ4YrPPv3Zbe7gtyKqzV1V5WB7rqvHmWc08fYzJ0_7c-B4VV3hZAZbJQuZJefPPDaf8YoGEeknyTyrzPXeAj_yQAjDlP_nIrE4mX8O4AM1vGGsqZK2BAa5qREhRFL2-Dp2RGK_CffjdtV24MiBefhLg-6DfB-SQ8ElCJKeWy_1GbU1FK9GCybcpy-GrRuGLmUR1cBTFXIHBvDa4bdboMPhNO7kR" type="button">
+<img alt="The Jaipur Emerald Octagon Ring hero view" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzwMVKpUmyC5AnxPnj8QEHFTCZkcov5AkGNAZaxxUgoi03WXNRsam0nVHQ1nWrZ7OxAulQ8DJYMvhjg2gxAe-f980Hf1_Cw6wapBwIDMH2p0oulRFWBZDVyvU92mbWmnEgeGRJ4oCIS8tU1pg3ynUuJKw1p-WOKedI9PJYXYP9jMzRabyyIWsZJRbMeQ81qeNYbAW_StaIhvL-54W10zraEQR6jJWrnVhqQS7trZku">
+<span class="absolute bottom-1 left-1 font-label-micro text-[8px] bg-charcoal-ink/80 text-vellum-cream px-1 py-0.5 tracking-widest uppercase">HERO</span>
+</button>
+<button class="thumb-btn w-16 h-20 md:w-20 md:h-24 bg-surface-container overflow-hidden shrink-0 relative transition-all duration-200 opacity-70 hover:opacity-100" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuBG-XL5ngg-vZTOvzXqAvPWHj1IwrzHNQOSm-3mL5ulQk3M5d3oAlLpXNLFSpyjlCYZbmM2IusbEVHbQef16yJoYtgZE6WxuGekOSC3SUzUraym1SOoV7L2iYPC1EHafGCOA92u5nbQfm_0lNHInXqHLNtbTLtFsM8_P16UfQAs6aZKjxzD2P1DYK2YRuxr9zDSpc_AiSS2AxqEFJMKejc1fkjsHsE3e5aNrvzgQ8mI" type="button">
+<img alt="Macro facet closeup" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG-XL5ngg-vZTOvzXqAvPWHj1IwrzHNQOSm-3mL5ulQk3M5d3oAlLpXNLFSpyjlCYZbmM2IusbEVHbQef16yJoYtgZE6WxuGekOSC3SUzUraym1SOoV7L2iYPC1EHafGCOA92u5nbQfm_0lNHInXqHLNtbTLtFsM8_P16UfQAs6aZKjxzD2P1DYK2YRuxr9zDSpc_AiSS2AxqEFJMKejc1fkjsHsE3e5aNrvzgQ8mI">
+<span class="absolute bottom-1 left-1 font-label-micro text-[8px] bg-charcoal-ink/80 text-vellum-cream px-1 py-0.5 tracking-widest uppercase">MACRO</span>
+</button>
+<button class="thumb-btn w-16 h-20 md:w-20 md:h-24 bg-surface-container overflow-hidden shrink-0 relative transition-all duration-200 opacity-70 hover:opacity-100" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCATcCbgN-wATFwJqKq_e4CLM6djf6unS31L9LtZT4gKmMHw0CT3chBWRJJF10CV-nSRUr6x1XPgxNfLiaRiRbmJPnLwVtzRbnrzLDTkqpYpK7Y4NGy66Z9bz-MMKFMrt_X0vxdgiyDWYPsX2eY-29OaYWZs4ywo4Lxafy2d4hROVupRL0MOt-yNPGVn6600Ov_v-ZvHfg_nfRq5R8HAxZVuEcZc7if9NP49TeW_Jdj" type="button">
+<img alt="Side profile bezel angle" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCATcCbgN-wATFwJqKq_e4CLM6djf6unS31L9LtZT4gKmMHw0CT3chBWRJJF10CV-nSRUr6x1XPgxNfLiaRiRbmJPnLwVtzRbnrzLDTkqpYpK7Y4NGy66Z9bz-MMKFMrt_X0vxdgiyDWYPsX2eY-29OaYWZs4ywo4Lxafy2d4hROVupRL0MOt-yNPGVn6600Ov_v-ZvHfg_nfRq5R8HAxZVuEcZc7if9NP49TeW_Jdj">
+<span class="absolute bottom-1 left-1 font-label-micro text-[8px] bg-charcoal-ink/80 text-vellum-cream px-1 py-0.5 tracking-widest uppercase">PROFILE</span>
+</button>
+<button class="thumb-btn w-16 h-20 md:w-20 md:h-24 bg-surface-container overflow-hidden shrink-0 relative transition-all duration-200 opacity-70 hover:opacity-100" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDWhcwT_j0UycWaHtPiL08C8DC_Hs2yBBzPvIycMEP5Ps-q0tqtWms1OjbyuGQjJyjDRH13ih7D2jkwFzMU3GI1AeV9_p3E7X8hFiaWUbAx5073sYQHM-BL1BEGUjK-ZrQ8xTbajUY2W4pjSzzb1rnJ7U_h8SYVWcBQJoewv0prUKGLeQemANxO52N64SZV7ua4yq-OmRJLt-PaKPbqgQdN6t2aKBo86eGdV_cieUJR" type="button">
+<img alt="On hand scale view" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWhcwT_j0UycWaHtPiL08C8DC_Hs2yBBzPvIycMEP5Ps-q0tqtWms1OjbyuGQjJyjDRH13ih7D2jkwFzMU3GI1AeV9_p3E7X8hFiaWUbAx5073sYQHM-BL1BEGUjK-ZrQ8xTbajUY2W4pjSzzb1rnJ7U_h8SYVWcBQJoewv0prUKGLeQemANxO52N64SZV7ua4yq-OmRJLt-PaKPbqgQdN6t2aKBo86eGdV_cieUJR">
+<span class="absolute bottom-1 left-1 font-label-micro text-[8px] bg-charcoal-ink/80 text-vellum-cream px-1 py-0.5 tracking-widest uppercase">ON HAND</span>
+</button>
+</div>
+<!-- Main Showcase Stage -->
+<div class="flex-1 flex flex-col relative bg-linen-surface shadow-sm overflow-hidden group border border-border-hairline">
+<!-- Gemstone Provenance Overlay Badges -->
+<div class="absolute top-4 left-4 z-20 flex flex-wrap gap-1.5 items-center">
+<span class="font-label-micro text-label-micro bg-primary-container text-vellum-cream px-2.5 py-1 tracking-[0.22em] uppercase font-semibold">
+                BIS 916 HALLMARKED
+              </span>
+<span class="font-label-micro text-label-micro bg-vellum-cream/90 backdrop-blur-sm text-charcoal-ink px-2.5 py-1 tracking-[0.22em] uppercase shadow-sm">
+                NATURAL COLOMBIAN EMERALD
+              </span>
+<span class="font-label-micro text-label-micro bg-vellum-cream/90 backdrop-blur-sm text-on-surface-variant px-2 py-1 tracking-[0.22em] uppercase hidden sm:inline-block">
+                JAIPUR ATELIER
+              </span>
+</div>
+<!-- Main Image Stage -->
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden cursor-crosshair" id="main-image-container">
+<img alt="The Jaipur Emerald Octagon Ring" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" id="main-display-image" loading="eager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrN1nvJXgmcUV6QdQ4YrPPv3Zbe7gtyKqzV1V5WB7rqvHmWc08fYzJ0_7c-B4VV3hZAZbJQuZJefPPDaf8YoGEeknyTyrzPXeAj_yQAjDlP_nIrE4mX8O4AM1vGGsqZK2BAa5qREhRFL2-Dp2RGK_CffjdtV24MiBefhLg-6DfB-SQ8ElCJKeWy_1GbU1FK9GCybcpy-GrRuGLmUR1cBTFXIHBvDa4bdboMPhNO7kR">
+<!-- Magnification Cue Overlay -->
+<div class="absolute bottom-4 right-4 z-20 bg-charcoal-ink/80 backdrop-blur-md text-vellum-cream px-3 py-1.5 flex items-center space-x-2 pointer-events-none transition-opacity duration-300 opacity-90 group-hover:opacity-100">
+<span class="material-symbols-outlined text-[15px] text-bronze-accent">zoom_in</span>
+<span class="font-label-micro text-label-micro tracking-[0.2em] uppercase">INSPECT 4X FACET CLARITY</span>
+</div>
+<!-- Archival Watermark Subtle Texture -->
+<div class="absolute bottom-4 left-4 z-10 pointer-events-none">
+<span class="font-label-micro text-label-micro tracking-[0.3em] uppercase text-charcoal-ink/40 font-bold">ARCHIVAL MASTERWORK · 1 OF 12</span>
+</div>
+</div>
+<!-- Verification Footer Bar -->
+<div class="p-space-sm bg-surface-container-high flex items-center justify-between border-t border-border-hairline">
+<div class="flex items-center space-x-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-bronze-accent">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Gemological Institute Laboratory Certificate #JPR-4890-EM Included</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. PRODUCT DETAILS & TRANSACTIONS (RIGHT COLUMN: 5 Cols Desktop) -->
+<div class="lg:col-span-5 flex flex-col bg-linen-surface p-space-md md:p-space-lg shadow-sm border border-border-hairline">
+<!-- Atelier Lot Subtitle & Wishlist Header -->
+<div class="flex items-center justify-between pb-1">
+<p class="font-label-micro text-label-micro text-garnet-deep tracking-[0.22em] uppercase font-semibold">
+              ATELIER EDITIONS · LOT #JA-2024-EM09
+            </p>
+<button aria-label="Toggle Vault Wishlist" class="p-2 text-on-surface-variant hover:text-garnet-deep transition-colors flex items-center space-x-1 group" id="wishlist-toggle" type="button">
+<span class="material-symbols-outlined text-[22px] transition-transform group-hover:scale-110" id="wishlist-icon">favorite</span>
+<span class="font-label-micro text-label-micro tracking-[0.18em] uppercase hidden sm:inline" id="wishlist-text">Save</span>
+</button>
+</div>
+<!-- Product Title -->
+<h1 class="font-headline-lg text-headline-lg text-charcoal-ink tracking-tight font-normal uppercase leading-tight mt-1">
+            The Jaipur Emerald Octagon Ring
+          </h1>
+<!-- SKU & Availability -->
+<div class="flex flex-wrap items-center gap-space-sm mt-space-xs text-on-surface-variant">
+<span class="font-label-micro text-label-micro uppercase tracking-[0.18em]">SKU: OLV-RNG-EM-089</span>
+<span class="w-1 h-1 rounded-full bg-bronze-accent"></span>
+<div class="flex items-center space-x-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-700 animate-pulse"></span>
+<span class="font-body-sm text-body-sm text-emerald-900 font-medium">In Stock · Ready for Armored Dispatch in 48 Hours</span>
+</div>
+</div>
+<!-- Price Showcase & Oliver Privilege Module -->
+<div class="mt-space-md p-space-md bg-surface-container space-y-space-xs border border-border-hairline">
+<div class="flex items-baseline space-x-space-sm">
+<span class="font-price-headline text-price-headline text-charcoal-ink font-semibold tracking-tight">₹18,900</span>
+<span class="font-body-md text-body-md text-outline line-through">₹21,000</span>
+<span class="font-label-micro text-label-micro text-garnet-deep uppercase tracking-widest bg-error-container px-2 py-0.5">10% CONCESSION</span>
+</div>
+<!-- Privilege Pricing Card -->
+<div class="p-space-sm bg-vellum-cream mt-space-xs flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs border border-border-hairline">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-garnet-deep text-[20px]">workspace_premium</span>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-price-headline text-[17px] text-garnet-deep font-semibold tracking-tight">₹17,955</span>
+<span class="font-label-micro text-label-micro text-garnet-deep font-bold tracking-[0.18em] uppercase">PRIVILEGE PRICE</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant">5% additional deduction for registered patrons</p>
+</div>
+</div>
+<a class="font-label-uppercase text-label-uppercase text-garnet-deep hover:text-garnet-wine underline underline-offset-4 tracking-[0.18em] whitespace-nowrap self-start sm:self-center" href="#">
+                Join for ₹149/mo
+              </a>
+</div>
+<p class="font-label-micro text-label-micro text-on-surface-variant tracking-[0.18em] pt-1">
+              ALL TAXES INCLUDED · STATUTORY GST (3%) APPLIED AT SOURCE
+            </p>
+</div>
+<!-- Short Description Copy -->
+<p class="font-body-md text-body-md text-charcoal-ink mt-space-md leading-relaxed">
+            Precision-cut natural Colombian emerald set in an architectural bezel of hallmarked 18K solid yellow gold. Designed for everyday reverence, quiet grandeur, and generational permanence.
+          </p>
+<!-- Ring Size Selection -->
+<div class="mt-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="font-label-uppercase text-label-uppercase text-charcoal-ink uppercase tracking-[0.18em] font-medium">Select Ring Size (Indian Standard)</span>
+<span class="font-label-micro text-label-micro text-garnet-deep bg-error-container px-1.5 py-0.5 uppercase tracking-wider font-semibold" id="selected-size-chip">Size 14 IN</span>
+</div>
+<button class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-garnet-deep underline underline-offset-4 tracking-[0.18em] flex items-center space-x-1" id="open-sizing-modal" type="button">
+<span class="material-symbols-outlined text-[14px]">straighten</span>
+<span class="">Find Your Size</span>
+</button>
+</div>
+<!-- Ring Sizes Button Grid -->
+<div class="grid grid-cols-6 gap-2 mt-space-sm" id="size-selector-group">
+<button class="size-btn py-3 text-center font-body-sm text-body-sm uppercase transition-all duration-200 bg-surface-container text-on-surface hover:bg-surface-variant border border-border-hairline" data-size="10" type="button">10</button>
+<button class="size-btn py-3 text-center font-body-sm text-body-sm uppercase transition-all duration-200 bg-surface-container text-on-surface hover:bg-surface-variant border border-border-hairline" data-size="12" type="button">12</button>
+<button class="size-btn py-3 text-center font-body-sm text-body-sm uppercase transition-all duration-200 bg-primary-container text-vellum-cream font-semibold shadow-sm border border-primary-container" data-size="14" type="button">14</button>
+<button class="size-btn py-3 text-center font-body-sm text-body-sm uppercase transition-all duration-200 bg-surface-container text-on-surface hover:bg-surface-variant border border-border-hairline" data-size="16" type="button">16</button>
+<button class="size-btn py-3 text-center font-body-sm text-body-sm uppercase transition-all duration-200 bg-surface-container text-on-surface hover:bg-surface-variant border border-border-hairline" data-size="18" type="button">18</button>
+<button class="size-btn py-3 text-center font-body-sm text-body-sm uppercase transition-all duration-200 bg-surface-container text-on-surface hover:bg-surface-variant border border-border-hairline" data-size="20" type="button">20</button>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-1.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-bronze-accent">check_circle</span>
+              Complimentary one-time atelier resizing within 60 days of acquisition.
+            </p>
+</div>
+<!-- Quantity & Acquire CTA Row -->
+<div class="mt-space-lg flex flex-col sm:flex-row gap-space-sm">
+<!-- Stepper -->
+<div class="flex items-center bg-surface-container w-full sm:w-36 h-[52px] justify-between px-space-sm border border-border-hairline">
+<button aria-label="Decrease quantity" class="w-8 h-8 flex items-center justify-center text-charcoal-ink hover:text-garnet-deep transition-colors text-lg" id="qty-decrement" type="button">−</button>
+<span class="font-price-headline text-[16px] text-charcoal-ink font-medium select-none" id="qty-val">1</span>
+<button aria-label="Increase quantity" class="w-8 h-8 flex items-center justify-center text-charcoal-ink hover:text-garnet-deep transition-colors text-lg" id="qty-increment" type="button">+</button>
+</div>
+<!-- Acquire Primary Button -->
+<button class="flex-1 h-[52px] bg-primary-container text-vellum-cream font-label-uppercase text-label-uppercase tracking-[0.22em] uppercase hover:bg-garnet-wine active:scale-[0.99] transition-all duration-200 flex items-center justify-center space-x-3 shadow-md group" id="acquire-btn" type="button">
+<span class="material-symbols-outlined text-[18px] text-bronze-accent transition-transform group-hover:translate-x-0.5">shopping_bag</span>
+<span class="">ACQUIRE PIECE — ADD TO BAG</span>
+</button>
+</div>
+<!-- Secondary Bespoke Inquiry Button -->
+<div class="mt-space-xs grid grid-cols-1">
+<button class="py-2.5 bg-transparent hover:bg-surface-container font-label-uppercase text-label-uppercase text-garnet-deep tracking-[0.18em] uppercase transition-colors flex items-center justify-center space-x-2 border border-border-hairline" type="button">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span class="">Consult Concierge</span>
+</button>
+</div>
+<!-- Archival Dispatch Badge -->
+<div class="mt-space-md p-space-sm bg-surface-container flex items-center gap-space-sm border border-border-hairline">
+<span class="material-symbols-outlined text-[20px] text-bronze-accent shrink-0">shield</span>
+<div class="flex-1 text-on-surface-variant font-body-sm text-[12px] leading-snug">
+              Each parcel is sealed in tamper-evident dual custody lockboxes, insured at full valuation through national armored transit.
+            </div>
+</div>
+</div>
+</div>
+<!-- 6. 4-PILLAR ARCHIVAL ASSURANCE STRIP -->
+<div class="mt-space-2xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter bg-linen-surface p-space-lg shadow-sm border border-border-hairline">
+<div class="flex items-start space-x-space-sm">
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center shrink-0 border border-border-hairline">
+<span class="material-symbols-outlined text-garnet-deep text-[22px]">workspace_premium</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[18px] text-charcoal-ink font-normal uppercase">100% Certified Stones</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Accompanied by an individual Gemological Institute Laboratory dossier verifying natural unheated origin.</p>
+</div>
+</div>
+<div class="flex items-start space-x-space-sm">
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center shrink-0 border border-border-hairline">
+<span class="material-symbols-outlined text-garnet-deep text-[22px]">verified</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[18px] text-charcoal-ink font-normal uppercase">BIS 916 Solid Gold</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Laser-engraved Bureau of Indian Standards hallmarking ensures authenticated pure gold content.</p>
+</div>
+</div>
+<div class="flex items-start space-x-space-sm">
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center shrink-0 border border-border-hairline">
+<span class="material-symbols-outlined text-garnet-deep text-[22px]">local_shipping</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[18px] text-charcoal-ink font-normal uppercase">Armored Delivery</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Insured dual-custody priority transit across India via Sequel Secure and Blue Dart Apex logistics.</p>
+</div>
+</div>
+<div class="flex items-start space-x-space-sm">
+<div class="w-10 h-10 bg-surface-container flex items-center justify-center shrink-0 border border-border-hairline">
+<span class="material-symbols-outlined text-garnet-deep text-[22px]">autorenew</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[18px] text-charcoal-ink font-normal uppercase">6-Month Replacement</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">No-questions-asked atelier replacement pledge and complimentary lifetime ultrasonic cleaning.</p>
+</div>
+</div>
+</div>
+<!-- 7. EDITORIAL CRAFT STORY & INTERACTIVE ACCORDIONS -->
+<div class="mt-space-2xl grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Editorial Archival Note with Photographic Plate -->
+<div class="lg:col-span-5 bg-surface-container p-space-lg flex flex-col justify-between border border-border-hairline">
+<div>
+<span class="font-label-micro text-label-micro text-garnet-deep uppercase tracking-[0.22em] font-semibold">ORIGIN &amp; ATELIER CRAFT</span>
+<h3 class="font-headline-md text-headline-md text-charcoal-ink uppercase mt-2">The Geometry of Solitude</h3>
+<p class="font-body-md text-body-md text-charcoal-ink mt-space-sm leading-relaxed">
+              Mined from the venerable Muzo reserves in the Andean foothills, each emerald selected for The Jaipur Octagon embodies the intense foliage hues revered by Rajput royalty. Set flush within a substantial modern step-bezel, it combines ancient stone veneration with modern architectural geometry.
+            </p>
+</div>
+<div class="mt-space-lg aspect-[16/10] bg-vellum-cream overflow-hidden relative shadow-inner border border-border-hairline">
+<img alt="Jaipur atelier master craftsman faceting emerald" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMr4zEH0LVLNMVeianHmRKfhGsiFTZO03tzyRnWg_nS11h_kexcswq8vBnGJ1cKSifDgL1keya7aqhA2cdBC9KSRoo-t7exPDsq7dKqjq8Y-QB7XdsZ8o7UzoLK0CR9nIzC3OxXaUYSFUZpTV1mfRUzyWi8csvjf0Riw2Rj-xIZm_bKltOI7HBlgg9TmRiZZji2ixVlt0pOIIictlTUWIuVlWYXf5P2waXZD5fG1Lm">
+<div class="absolute bottom-2 left-2 bg-charcoal-ink/80 text-vellum-cream px-2 py-0.5 font-label-micro text-[8px] uppercase tracking-widest">
+              MAISON ARCHIVE · JAIPUR ATELIER 1974
+            </div>
+</div>
+</div>
+<!-- Right Column: Accordion Panels -->
+<div class="lg:col-span-7 flex flex-col space-y-space-xs" id="accordion-group">
+<!-- Accordion Item 1 (Open by default) -->
+<div class="accordion-item bg-linen-surface overflow-hidden border border-border-hairline transition-all duration-300">
+<button aria-expanded="true" class="accordion-trigger w-full p-space-md flex items-center justify-between text-left hover:bg-surface-container transition-colors" type="button">
+<span class="font-headline-sm text-[20px] text-charcoal-ink uppercase">Product Description &amp; Inspirations</span>
+<span class="material-symbols-outlined text-garnet-deep transition-transform duration-300 accordion-icon rotate-180">expand_more</span>
+</button>
+<div class="accordion-content p-space-md pt-0 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+<p class="">Conceived as a talisman of stillness, The Jaipur Emerald Octagon Ring departs from standard prong configurations in favor of an uninterrupted solid 18K yellow gold lip. This protective bezel encases the emerald's natural crystalline edges while accentuating its vivid chroma.</p>
+<p class="mt-space-sm">Each octagon emerald is hand-selected by our master gemologist in Johari Bazaar, prioritizing natural inner gardens ("jardin") that confirm unheated origin and untreated provenance.</p>
+</div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="accordion-item bg-linen-surface overflow-hidden border border-border-hairline transition-all duration-300">
+<button aria-expanded="false" class="accordion-trigger w-full p-space-md flex items-center justify-between text-left hover:bg-surface-container transition-colors" type="button">
+<span class="font-headline-sm text-[20px] text-charcoal-ink uppercase">Product Details &amp; Specifications</span>
+<span class="material-symbols-outlined text-garnet-deep transition-transform duration-300 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content hidden p-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+<dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-gutter gap-y-space-xs font-body-sm text-body-sm">
+<div class="py-2 bg-surface-container px-3 flex justify-between border border-border-hairline">
+<dt class="text-on-surface-variant uppercase font-label-micro text-label-micro">Primary Gemstone</dt>
+<dd class="text-charcoal-ink font-medium">Natural Colombian Emerald (1.85 ct)</dd>
+</div>
+<div class="py-2 bg-surface-container px-3 flex justify-between border border-border-hairline">
+<dt class="text-on-surface-variant uppercase font-label-micro text-label-micro">Gem Treatment</dt>
+<dd class="text-charcoal-ink font-medium">100% Unheated / Minor Cedar Oil</dd>
+</div>
+<div class="py-2 bg-surface-container px-3 flex justify-between border border-border-hairline">
+<dt class="text-on-surface-variant uppercase font-label-micro text-label-micro">Metal Purity</dt>
+<dd class="text-charcoal-ink font-medium">18K Solid Yellow Gold (BIS 916)</dd>
+</div>
+<div class="py-2 bg-surface-container px-3 flex justify-between border border-border-hairline">
+<dt class="text-on-surface-variant uppercase font-label-micro text-label-micro">Gross Weight</dt>
+<dd class="text-charcoal-ink font-medium">4.82 grams (Approximate)</dd>
+</div>
+<div class="py-2 bg-surface-container px-3 flex justify-between border border-border-hairline">
+<dt class="text-on-surface-variant uppercase font-label-micro text-label-micro">Band Width</dt>
+<dd class="text-charcoal-ink font-medium">2.2 mm Comfort Fit Shank</dd>
+</div>
+<div class="py-2 bg-surface-container px-3 flex justify-between border border-border-hairline">
+<dt class="text-on-surface-variant uppercase font-label-micro text-label-micro">Setting Style</dt>
+<dd class="text-charcoal-ink font-medium">Architectural Octagonal Bezel</dd>
+</div>
+<div class="py-2 bg-surface-container px-3 flex justify-between sm:col-span-2 border border-border-hairline">
+<dt class="text-on-surface-variant uppercase font-label-micro text-label-micro">Hallmark Accreditation</dt>
+<dd class="text-charcoal-ink font-medium">BIS 916 Stamped &amp; Registered under Oliver High Jewellery</dd>
+</div>
+</dl>
+</div>
+</div>
+<!-- Accordion Item 3 -->
+<div class="accordion-item bg-linen-surface overflow-hidden border border-border-hairline transition-all duration-300">
+<button aria-expanded="false" class="accordion-trigger w-full p-space-md flex items-center justify-between text-left hover:bg-surface-container transition-colors" type="button">
+<span class="font-headline-sm text-[20px] text-charcoal-ink uppercase">Shipping &amp; Armored Transit</span>
+<span class="material-symbols-outlined text-garnet-deep transition-transform duration-300 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content hidden p-space-md pt-0 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+<p class="">Every shipment is dispatched under comprehensive all-risk transit insurance at zero surcharge to our clientele. Our courier partners (Blue Dart Apex &amp; Sequel Secure) utilize OTP verification on hand-off.</p>
+<ul class="list-disc list-inside mt-space-sm space-y-1 font-body-sm text-body-sm">
+<li class="">Metro Dispatches (Delhi, Mumbai, Bengaluru): 24–48 hours post QC inspection.</li>
+<li class="">National Rest-of-India: 3–4 business days via expedited air.</li>
+<li class="">Dual tamper-evident seals guaranteeing non-intervention during transit.</li>
+</ul>
+</div>
+</div>
+<!-- Accordion Item 4 -->
+<div class="accordion-item bg-linen-surface overflow-hidden border border-border-hairline transition-all duration-300">
+<button aria-expanded="false" class="accordion-trigger w-full p-space-md flex items-center justify-between text-left hover:bg-surface-container transition-colors" type="button">
+<span class="font-headline-sm text-[20px] text-charcoal-ink uppercase">Returns &amp; Lifetime Atelier Care</span>
+<span class="material-symbols-outlined text-garnet-deep transition-transform duration-300 accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content hidden p-space-md pt-0 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+<p class="">We honor a 15-day complimentary return or exchange period for unworn pieces with security tags intact. Furthermore, your acquisition entitles you to:</p>
+<div class="mt-space-sm grid grid-cols-1 sm:grid-cols-2 gap-space-xs font-body-sm text-body-sm">
+<div class="bg-surface-container p-2 border border-border-hairline">
+<span class="font-medium text-charcoal-ink">Lifetime Ultrasonic Cleaning:</span> Free in all Oliver salons worldwide.
+                </div>
+<div class="bg-surface-container p-2 border border-border-hairline">
+<span class="font-medium text-charcoal-ink">Prong &amp; Bezel Audit:</span> Annual complimentary inspection of gemstone security.
+                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 8. "HARMONIOUS COMPANIONS" (RELATED PIECES: 4 CARD GRID) -->
+<div class="mt-space-2xl pt-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg">
+<div>
+<p class="font-label-micro text-label-micro text-garnet-deep uppercase tracking-[0.22em] font-semibold">CURATED ACQUISITIONS</p>
+<h2 class="font-headline-lg text-headline-lg text-charcoal-ink uppercase tracking-tight mt-1">Harmonious Companions</h2>
+</div>
+<a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-garnet-deep transition-colors uppercase tracking-[0.18em] underline underline-offset-4 mt-space-sm md:mt-0" href="#">
+            Explore Rings &amp; Solitaires Archive →
+          </a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Related Card 1 -->
+<article class="bg-linen-surface flex flex-col group shadow-sm transition-all duration-300 hover:shadow-md border border-border-hairline">
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden">
+<img alt="Royal Blue Sapphire Drop Earrings" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLjdcG-mRnAncWFVvu3_LpgYvHz_6kEY4ZiYg-Jexxlep7nfCXHYc35lsVSD9CEOcEh8RkYmrivFpUlwQOqCbN0WYIDkaNW_2uaoN07ojPf_Gdsl_xUR3Xf2bd0pVUS1jSh9segGjPPb0XYDo9NcJl0owCfydIz5fcpfVUrnmDTKG-qNekeq3ysP_8olDFisGdcmcVY7dK5NPgiP3aNnhg26CozThTHgIksLXtlMAY">
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-vellum-cream/80 backdrop-blur-sm flex items-center justify-center text-charcoal-ink hover:text-garnet-deep transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-3 left-3 font-label-micro text-label-micro uppercase bg-primary-container text-vellum-cream px-2 py-0.5 tracking-wider">
+                CEYLON SAPPHIRE
+              </span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between">
+<div>
+<p class="font-label-micro text-label-micro text-on-surface-variant tracking-[0.18em] uppercase">EARRINGS · ATELIER #ER-402</p>
+<h3 class="font-headline-sm text-[18px] text-charcoal-ink uppercase mt-1 line-clamp-1">Royal Blue Sapphire Drop Earrings</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Natural Unheated Sapphires, 18K Gold</p>
+<div class="mt-space-sm">
+<div class="flex items-baseline space-x-2">
+<span class="font-price-headline text-[16px] text-charcoal-ink font-medium">₹24,500</span>
+</div>
+<p class="font-label-micro text-label-micro text-garnet-deep uppercase tracking-widest mt-0.5 font-semibold">
+                    ₹23,275 PRIVILEGE PRICE
+                  </p>
+</div>
+</div>
+<button class="mt-space-md w-full py-2.5 bg-surface-container hover:bg-primary-container text-charcoal-ink hover:text-vellum-cream font-label-uppercase text-label-uppercase tracking-[0.18em] uppercase transition-colors border border-border-hairline" type="button">
+                Acquire Piece
+              </button>
+</div>
+</article>
+<!-- Related Card 2 -->
+<article class="bg-linen-surface flex flex-col group shadow-sm transition-all duration-300 hover:shadow-md border border-border-hairline">
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden">
+<img alt="Stepped Bezel Emerald Studs" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsJ9ZlTIwEKD9axURr5aqxJVhVcMGZ3I_fv8Y4Q8tnGOrKpsPCoXjdv8qGpSKuKq_0qJ70vuS2ubAA6VSpQhz0Ndp95SVEWxmRMjYfv9p1NoKw6gBexbHyQVZR_gkvesXnbVOr0UzvkmgZcAa5nBoaHTQun3lJ3WVMcwd0gIU2qkPGfV2OXBSS78JOv6J1MgUu5tcnZPs1tE1uf1dqXNB1zNweU3LPdAYy0V5FzlM_">
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-vellum-cream/80 backdrop-blur-sm flex items-center justify-center text-charcoal-ink hover:text-garnet-deep transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-3 left-3 font-label-micro text-label-micro uppercase bg-primary-container text-vellum-cream px-2 py-0.5 tracking-wider">
+                PANJSHIR EMERALD
+              </span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between">
+<div>
+<p class="font-label-micro text-label-micro text-on-surface-variant tracking-[0.18em] uppercase">STUDS · ATELIER #EM-214</p>
+<h3 class="font-headline-sm text-[18px] text-charcoal-ink uppercase mt-1 line-clamp-1">Stepped Bezel Emerald Studs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">1.20 ct Matched Pair, 18K Solid Gold</p>
+<div class="mt-space-sm">
+<div class="flex items-baseline space-x-2">
+<span class="font-price-headline text-[16px] text-charcoal-ink font-medium">₹16,800</span>
+</div>
+<p class="font-label-micro text-label-micro text-garnet-deep uppercase tracking-widest mt-0.5 font-semibold">
+                    ₹15,960 PRIVILEGE PRICE
+                  </p>
+</div>
+</div>
+<button class="mt-space-md w-full py-2.5 bg-surface-container hover:bg-primary-container text-charcoal-ink hover:text-vellum-cream font-label-uppercase text-label-uppercase tracking-[0.18em] uppercase transition-colors border border-border-hairline" type="button">
+                Acquire Piece
+              </button>
+</div>
+</article>
+<!-- Related Card 3 -->
+<article class="bg-linen-surface flex flex-col group shadow-sm transition-all duration-300 hover:shadow-md border border-border-hairline">
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden">
+<img alt="Diamond and Emerald Duo Band" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIQk-p3O5yHiR03k9RMqKZl_k3oImcGv3ouF0GPgfvUVrOeKyAScqhyr1oMEKRN0MU59j-TnrtFgAMBIprvfzbTUhf4Q8pBfQkJsIHtqQDuHPfhITxU1FphGV_JW5El7A_Gs4D4jOh_-r0JImx5Il1l9oL2cWhnjpgei3Y5T3rXnDVYBYZpza6sotj9BFI2mSLdjF7aoKOMfvzRKod9JkG-3drbSVt07m6PJm22hQQ">
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-vellum-cream/80 backdrop-blur-sm flex items-center justify-center text-charcoal-ink hover:text-garnet-deep transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-3 left-3 font-label-micro text-label-micro uppercase bg-primary-container text-vellum-cream px-2 py-0.5 tracking-wider">
+                DUAL SUITE
+              </span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between">
+<div>
+<p class="font-label-micro text-label-micro text-on-surface-variant tracking-[0.18em] uppercase">RINGS · ATELIER #DB-881</p>
+<h3 class="font-headline-sm text-[18px] text-charcoal-ink uppercase mt-1 line-clamp-1">Diamond &amp; Emerald Duo Band</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">VVS Archival Diamonds, 18K Gold</p>
+<div class="mt-space-sm">
+<div class="flex items-baseline space-x-2">
+<span class="font-price-headline text-[16px] text-charcoal-ink font-medium">₹38,000</span>
+</div>
+<p class="font-label-micro text-label-micro text-garnet-deep uppercase tracking-widest mt-0.5 font-semibold">
+                    ₹36,100 PRIVILEGE PRICE
+                  </p>
+</div>
+</div>
+<button class="mt-space-md w-full py-2.5 bg-surface-container hover:bg-primary-container text-charcoal-ink hover:text-vellum-cream font-label-uppercase text-label-uppercase tracking-[0.18em] uppercase transition-colors border border-border-hairline" type="button">
+                Acquire Piece
+              </button>
+</div>
+</article>
+<!-- Related Card 4 -->
+<article class="bg-linen-surface flex flex-col group shadow-sm transition-all duration-300 hover:shadow-md border border-border-hairline">
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden">
+<img alt="Rose Quartz Architectural Pendant" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzQMsUYpFHmkq4T7kIOe-iwAWI0enRPIr1gzqMwb8a0LHBaksROD_EVdHFlf8tVPw3oqy28hm9M416lvMnwh8kVOVMBn0tzzTHHs1yPHCXs6hTYoHG85d4EB7TW0AzuV7vrqOHfQzsyOw5vtmCZcyt0bDKbxIABBKLdvDp2FkcUBU1PXYxXpd42lz28F9L7VfNCE_fPKaKNCKYJs7IY6B6uu6iQ4YmJr8dhxeBer9r">
+<button aria-label="Add to Wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-vellum-cream/80 backdrop-blur-sm flex items-center justify-center text-charcoal-ink hover:text-garnet-deep transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-3 left-3 font-label-micro text-label-micro uppercase bg-primary-container text-vellum-cream px-2 py-0.5 tracking-wider">
+                MADAGASCAR QUARTZ
+              </span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between">
+<div>
+<p class="font-label-micro text-label-micro text-on-surface-variant tracking-[0.18em] uppercase">PENDANTS · ATELIER #PD-119</p>
+<h3 class="font-headline-sm text-[18px] text-charcoal-ink uppercase mt-1 line-clamp-1">Rose Quartz Architectural Pendant</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Hand-Carved Quartz, 18K Yellow Gold</p>
+<div class="mt-space-sm">
+<div class="flex items-baseline space-x-2">
+<span class="font-price-headline text-[16px] text-charcoal-ink font-medium">₹14,200</span>
+</div>
+<p class="font-label-micro text-label-micro text-garnet-deep uppercase tracking-widest mt-0.5 font-semibold">
+                    ₹13,490 PRIVILEGE PRICE
+                  </p>
+</div>
+</div>
+<button class="mt-space-md w-full py-2.5 bg-surface-container hover:bg-primary-container text-charcoal-ink hover:text-vellum-cream font-label-uppercase text-label-uppercase tracking-[0.18em] uppercase transition-colors border border-border-hairline" type="button">
+                Acquire Piece
+              </button>
+</div>
+</article>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- 9. COMPLETE LUXURY FOOTER -->
+<footer class="w-full bg-charcoal-ink text-surface-container py-space-2xl border-t border-border-hairline"><div class="max-w-[1440px] mx-auto px-margin-mobile md:px-space-lg lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter mb-space-2xl"><div class="lg:col-span-4"><div class="mb-space-md"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAvvY75mhoVMmBDTYsAIE8C87aUa5Zq8OU-Y8M1S66F3DS2qdwhQdhZK_3Kuqpbcn4NbyY9g85eow3bV5qETLrZ4xD_OcwyOPVVKRgQlgXXPuz_crwLg8B3uQwcnMMAEveiSXTI0uVeUMHCgygo8sNXvRIsfoIFPYrfZU0ZO9vNzD0R0la5h8zazyYfNhJvQJl1r4BnJIayYEIvNgg9S8dh9DvdNtHT6YzCOB6XUtmB8Z1LyZ_OQaFdA" alt="OLIVER" class="h-8 w-auto object-contain brightness-0 invert"></div><p class="font-body-md text-body-md text-surface-variant max-w-sm mb-space-lg leading-relaxed">Handcrafted in Jaipur with natural gemstones and architectural discipline. Built for everyday reverence. Real gemstone jewelry for the moments you want to keep.</p><p class="font-label-micro text-label-micro text-bronze-accent tracking-[0.22em] uppercase mb-space-md">JAIPUR · RAJASTHAN · EST. 2021</p><div class="space-y-space-xs font-body-sm text-body-sm text-surface-variant"><p class="flex items-start"><span class="material-symbols-outlined text-[16px] mr-space-xs text-bronze-accent mt-0.5">location_on</span>B27 Green Park, Agra Road, Jaipur, Rajasthan 302004, India</p><p class="flex items-center"><span class="material-symbols-outlined text-[16px] mr-space-xs text-bronze-accent">mail</span>Oliverstones.co@gmail.com</p><p class="flex items-center"><span class="material-symbols-outlined text-[16px] mr-space-xs text-bronze-accent">call</span>+91 9024665590</p><p class="flex items-center"><span class="material-symbols-outlined text-[16px] mr-space-xs text-bronze-accent">schedule</span>Mon–Fri 9:00 AM–7:00 PM EST</p></div></div><div class="lg:col-span-2"><p class="font-label-uppercase text-label-uppercase text-vellum-cream mb-space-md tracking-[0.18em]">EXPLORE &amp; COMPANY</p><ul class="space-y-space-sm font-body-sm text-body-sm text-surface-variant"><li class="hover:text-vellum-cream transition-colors duration-200 cursor-pointer">Shop All</li><li class="hover:text-vellum-cream transition-colors duration-200 cursor-pointer">Rings</li><li class="hover:text-vellum-cream transition-colors duration-200 cursor-pointer">Earrings</li><li class="hover:text-vellum-cream transition-colors duration-200 cursor-pointer">Necklaces</li><li class="hover:text-vellum-cream transition-colors duration-200 cursor-pointer">About Us</li><li class="hover:text-vellum-cream transition-colors duration-200 cursor-pointer">Privilege Atelier</li></ul></div><div class="lg:col-span-3"><p class="font-label-uppercase text-label-uppercase text-vellum-cream mb-space-md tracking-[0.18em]">CLIENT CARE</p><ul class="space-y-space-sm font-body-sm text-body-sm text-surface-variant"><li class="hover:text-vellum-cream transition-colors duration-200 cursor-pointer">Bespoke Appointments</li><li class="hover:text-vellum-cream transition-colors duration-200 cursor-pointer">Complimentary Insured Shipping</li><li class="hover:text-vellum-cream transition-colors duration-200 cursor-pointer">Lifetime Authenticity &amp; Certificate</li><li class="hover:text-vellum-cream transition-colors duration-200 cursor-pointer">Exchange &amp; Concierge Returns</li><li class="hover:text-vellum-cream transition-colors duration-200 cursor-pointer">Gemological Care &amp; Servicing</li><li class="hover:text-vellum-cream transition-colors duration-200 cursor-pointer">Contact Atelier</li></ul></div><div class="lg:col-span-3"><p class="font-label-uppercase text-label-uppercase text-vellum-cream mb-space-md tracking-[0.18em]">VAULT DISPATCH</p><p class="font-body-sm text-body-sm text-surface-variant mb-space-md">Receive intimate notices regarding private salon viewings, seasonal debuts, and Privilege member allocations.</p><form class="flex flex-col space-y-space-xs" onsubmit="event.preventDefault(); alert('Patron subscription registered.');"><div class="relative"><input class="w-full bg-transparent border-b border-surface-variant/30 py-space-sm font-label-uppercase text-label-uppercase text-vellum-cream placeholder-surface-variant/40 focus:outline-none focus:border-vellum-cream transition-colors duration-200" placeholder="ENTER YOUR EMAIL ADDRESS" required="" type="email"><button class="absolute right-0 bottom-space-sm text-vellum-cream hover:text-bronze-accent transition-colors duration-200 font-label-uppercase text-label-uppercase" type="submit">DISPATCH</button></div><span class="font-label-micro text-label-micro text-surface-variant/60 uppercase tracking-[0.22em]">PRIVILEGE ALLOCATION PRIVACY ASSURED</span></form></div></div><div class="pt-space-lg border-t border-surface-variant/10 flex flex-col md:flex-row items-center justify-between text-surface-variant/70 font-label-micro text-label-micro uppercase tracking-[0.22em] space-y-space-sm md:space-y-0"><div class="">© 2025 OLIVER HIGH JEWELLERY MAISON. JAIPUR • NEW DELHI • MUMBAI. ALL RIGHTS RESERVED.</div><div class="flex space-x-space-md"><a class="hover:text-vellum-cream transition-colors" href="#">TERMS OF SALE</a><a class="hover:text-vellum-cream transition-colors" href="#">PRIVACY POLICY</a><a class="hover:text-vellum-cream transition-colors" href="#">GEMOLOGICAL DISCLOSURE</a></div></div></div></footer>
+<!-- Lightweight Vanilla JavaScript -->
+<script>
+  (function() {
+    // 1. Gallery Thumbnail Switcher
+    var thumbBtns = document.querySelectorAll('.thumb-btn');
+    var mainImg = document.getElementById('main-display-image');
+    var toastImg = document.getElementById('toast-preview-img');
+
+    thumbBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        thumbBtns.forEach(function(b) {
+          b.classList.remove('outline', 'outline-2', 'outline-primary-container', 'opacity-100');
+          b.classList.add('opacity-70');
+        });
+        btn.classList.add('outline', 'outline-2', 'outline-primary-container', 'opacity-100');
+        btn.classList.remove('opacity-70');
+
+        var newSrc = btn.getAttribute('data-img');
+        if (newSrc && mainImg) {
+          mainImg.src = newSrc;
+          if (toastImg) toastImg.src = newSrc;
+        }
+      });
+    });
+
+    // 2. Ring Size Selection
+    var currentSize = "14";
+    var sizeBtns = document.querySelectorAll('.size-btn');
+    var selectedSizeChip = document.getElementById('selected-size-chip');
+    var toastSizeLabel = document.getElementById('toast-size-label');
+
+    sizeBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        sizeBtns.forEach(function(b) {
+          b.classList.remove('bg-primary-container', 'text-vellum-cream', 'font-semibold', 'shadow-sm', 'border-primary-container');
+          b.classList.add('bg-surface-container', 'text-on-surface', 'border-border-hairline');
+        });
+        btn.classList.remove('bg-surface-container', 'text-on-surface', 'border-border-hairline');
+        btn.classList.add('bg-primary-container', 'text-vellum-cream', 'font-semibold', 'shadow-sm', 'border-primary-container');
+
+        currentSize = btn.getAttribute('data-size') || "14";
+        if (selectedSizeChip) selectedSizeChip.textContent = 'Size ' + currentSize + ' IN';
+        if (toastSizeLabel) toastSizeLabel.textContent = 'Size ' + currentSize + ' IN';
+      });
+    });
+
+    // 3. Quantity Stepper
+    var currentQty = 1;
+    var qtyVal = document.getElementById('qty-val');
+    var qtyDec = document.getElementById('qty-decrement');
+    var qtyInc = document.getElementById('qty-increment');
+    var toastQtyLabel = document.getElementById('toast-qty-label');
+
+    if (qtyDec && qtyInc && qtyVal) {
+      qtyDec.addEventListener('click', function() {
+        if (currentQty > 1) {
+          currentQty--;
+          qtyVal.textContent = currentQty;
+          if (toastQtyLabel) toastQtyLabel.textContent = currentQty;
+        }
+      });
+      qtyInc.addEventListener('click', function() {
+        if (currentQty < 10) {
+          currentQty++;
+          qtyVal.textContent = currentQty;
+          if (toastQtyLabel) toastQtyLabel.textContent = currentQty;
+        }
+      });
+    }
+
+    // 4. Wishlist Toggle State & Badges
+    var wishlistToggle = document.getElementById('wishlist-toggle');
+    var wishlistIcon = document.getElementById('wishlist-icon');
+    var wishlistText = document.getElementById('wishlist-text');
+    var wishlistBadge = document.getElementById('wishlist-badge');
+    var isWishlisted = false;
+
+    if (wishlistToggle && wishlistIcon) {
+      wishlistToggle.addEventListener('click', function() {
+        isWishlisted = !isWishlisted;
+        if (isWishlisted) {
+          wishlistIcon.style.fontVariationSettings = "'FILL' 1";
+          wishlistIcon.classList.add('text-garnet-deep');
+          if (wishlistText) wishlistText.textContent = "Saved";
+          if (wishlistBadge) wishlistBadge.textContent = "1";
+        } else {
+          wishlistIcon.style.fontVariationSettings = "'FILL' 0";
+          wishlistIcon.classList.remove('text-garnet-deep');
+          if (wishlistText) wishlistText.textContent = "Save";
+          if (wishlistBadge) wishlistBadge.textContent = "0";
+        }
+      });
+    }
+
+    // 5. Accordion Toggling
+    var accordionTriggers = document.querySelectorAll('.accordion-trigger');
+    accordionTriggers.forEach(function(trigger) {
+      trigger.addEventListener('click', function() {
+        var content = trigger.nextElementSibling;
+        var icon = trigger.querySelector('.accordion-icon');
+        var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+        if (isExpanded) {
+          content.classList.add('hidden');
+          trigger.setAttribute('aria-expanded', 'false');
+          if (icon) icon.classList.remove('rotate-180');
+        } else {
+          content.classList.remove('hidden');
+          trigger.setAttribute('aria-expanded', 'true');
+          if (icon) icon.classList.add('rotate-180');
+        }
+      });
+    });
+
+    // 6. Acquisition Toast Notification & Bag Counter
+    var acquireBtn = document.getElementById('acquire-btn');
+    var toast = document.getElementById('acquisition-toast');
+    var closeToast = document.getElementById('close-toast');
+    var toastDismissBtn = document.getElementById('toast-dismiss-btn');
+    var bagBadge = document.getElementById('bag-count-badge');
+    var viewBagLink = document.getElementById('view-bag-link');
+    var totalBagItems = 0;
+    var toastTimer = null;
+
+    function showToast() {
+      if (!toast) return;
+      totalBagItems += currentQty;
+      if (bagBadge) bagBadge.textContent = totalBagItems;
+      if (viewBagLink) viewBagLink.textContent = 'View Bag (' + totalBagItems + ')';
+
+      toast.classList.remove('-translate-y-40', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function() {
+        hideToast();
+      }, 5000);
+    }
+
+    function hideToast() {
+      if (!toast) return;
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('-translate-y-40', 'opacity-0', 'pointer-events-none');
+    }
+
+    if (acquireBtn) acquireBtn.addEventListener('click', showToast);
+    if (closeToast) closeToast.addEventListener('click', hideToast);
+    if (toastDismissBtn) toastDismissBtn.addEventListener('click', hideToast);
+
+    // 7. Sizing Modal Functionality
+    var openSizingBtn = document.getElementById('open-sizing-modal');
+    var closeSizingBtn = document.getElementById('close-sizing-modal');
+    var confirmSizeGuide = document.getElementById('confirm-size-guide');
+    var sizingModal = document.getElementById('sizing-modal');
+    var sizingCard = document.getElementById('sizing-modal-card');
+
+    function openModal() {
+      if (!sizingModal) return;
+      sizingModal.classList.remove('opacity-0', 'pointer-events-none');
+      sizingModal.classList.add('opacity-100');
+      if (sizingCard) {
+        sizingCard.classList.remove('scale-95');
+        sizingCard.classList.add('scale-100');
+      }
+    }
+
+    function closeModal() {
+      if (!sizingModal) return;
+      sizingModal.classList.add('opacity-0', 'pointer-events-none');
+      sizingModal.classList.remove('opacity-100');
+      if (sizingCard) {
+        sizingCard.classList.remove('scale-100');
+        sizingCard.classList.add('scale-95');
+      }
+    }
+
+    if (openSizingBtn) openSizingBtn.addEventListener('click', openModal);
+    if (closeSizingBtn) closeSizingBtn.addEventListener('click', closeModal);
+    if (confirmSizeGuide) confirmSizeGuide.addEventListener('click', closeModal);
+    if (sizingModal) {
+      sizingModal.addEventListener('click', function(e) {
+        if (e.target === sizingModal) closeModal();
+      });
+    }
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
